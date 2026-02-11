@@ -14,7 +14,7 @@ setInterval(createHearts, 300);
 
 // Move "No" button function
 function moveButton(button) {
-    const maxMove = 60;
+    const maxMove = 200;
 
     const currentX = button.offsetLeft;
     const currentY = button.offsetTop;
