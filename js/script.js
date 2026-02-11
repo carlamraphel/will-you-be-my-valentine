@@ -14,12 +14,20 @@ setInterval(createHearts, 300);
 
 // Move "No" button function
 function moveButton(button) {
-    const x = Math.random() * (window.innerWidth - button.offsetWidth);
-    const y = Math.random() * (window.innerHeight - button.offsetHeight);
-    
+    const maxMove = 300;
+
+    const currentX = button.offsetLeft;
+    const currentY = button.offsetTop;
+
+    const moveX = (Math.random() - 0.5) * maxMove;
+    const moveY = (Math.random() - 0.5) * maxMove;
+
+    const newX = currentX + moveX;
+    const newY = currentY + moveY;
+
     button.style.position = 'absolute';
-    button.style.left = `${x}px`;
-    button.style.top = `${y}px`;
+    button.style.left = `${newX}px`;
+    button.style.top = `${newY}px`;
 }
 
 // Navigation functions
